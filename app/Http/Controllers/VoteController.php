@@ -8,9 +8,10 @@ use App\Models\Vote;
 class VoteController extends Controller
 {
     public function showAll() {
-        $votes = Vote::all();
+        $votes = Vote::paginate(5);
         return view('index', ['votes' => $votes]);
     }
+
 
     public function create(Request $req) {
         $vote = new Vote;

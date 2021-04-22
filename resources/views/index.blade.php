@@ -70,7 +70,16 @@
 			</div>
 			<!-- КОНЕЦ: Карточка голосования -------------------------------------->
 			@endforeach
+		
+			<div
+			style="display: flex;
+			justify-content: center;"
+			>			
+				{{ $votes->onEachSide(5)->links('pagination::bootstrap-4')}}	
+			</div>
+		
 		</div>
+		
 	</main>
 	<!-- КОНЕЦ: Основное содержимое страницы -->
 </body>
